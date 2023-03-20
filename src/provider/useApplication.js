@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { AppContext } from "./provider";
+import { CommonContext } from "./provider";
 
-export const useTemplateContext = () => {
+export const useApplication = () => {
     // get the context
-    const context = useContext(AppContext);
+    const context = useContext(CommonContext);
 
     console.log("CONTEXT", context)
   
@@ -11,9 +11,9 @@ export const useTemplateContext = () => {
     if (!context) {
       throw new Error("useUserContext was used outside of its Provider");
     }
-    const { user } = context;
+    const { application } = context;
   
-    return {user};
+    return {application};
   };
 
-export default useTemplateContext;  
+export default useApplication;  

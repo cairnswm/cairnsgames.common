@@ -1,13 +1,13 @@
 const { default: Template } = require("../components/template");
-import { ContextProvider } from "../provider/provider";
+import { CommonProvider } from "../provider/provider";
 
 const Application = (props) => {
   return (
-    <ContextProvider test="Initial Value for Test">
+    <CommonProvider test="Initial Value for Test" application="950ef1d9-c657-11ed-95d1-f0a654c38aa6">
       <div className="wrapper">
         <Template />
       </div>
-    </ContextProvider>
+    </CommonProvider>
   );
 };
 

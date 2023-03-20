@@ -2,8 +2,8 @@ const deps = require('./package.json').dependencies
 
 // For a module
 module.exports = {
-  name: 'template',
-  filename: 'template.js',
+  name: 'common',
+  filename: 'common.js',
   exposes: {
     './components': './src/components/exports.js',
     './provider': './src/provider/exports.js',

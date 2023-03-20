@@ -1,23 +1,21 @@
 import React, { createContext, useState, useEffect } from "react";
-import useUser from "./datahooks/useUser";
 
 // create context
-const AppContext = createContext();
+const CommonContext = createContext();
 
-const ContextProvider = (props) => {
+const CommonProvider = (props) => {
   const { children } = props;
-  // the value that will be given to the context
-  const { user } = useUser();
 
-  const [test, settest] = useState(props.test);
+  const [theme, setTheme] = useState(props.theme || "light");
+  const [application, setApplication] = useState(props.application);
 
   return (
     // the Provider gives access to the context to its children
-    <AppContext.Provider value={{user, test, settest}}>
+    <CommonContext.Provider value={{theme, setTheme, application}}>
       {children}
-    </AppContext.Provider>
+    </CommonContext.Provider>
   );
 };
 
-export { AppContext, ContextProvider };
-export default ContextProvider;
+export { CommonContext, CommonProvider };
+export default CommonProvider;

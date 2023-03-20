@@ -13,8 +13,8 @@
     "web-vitals": "^3.0.4"
   },
   "scripts": {
-    "start": "set PORT=8999 && craco start",
-    "serve": "http-server ./build -p 8999",
+    "start": "set PORT=3012 && craco start",
+    "serve": "http-server ./build -p 3012",
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",

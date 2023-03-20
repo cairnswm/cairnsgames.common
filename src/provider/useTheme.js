@@ -1,19 +1,17 @@
 import { useContext } from "react";
 import { CommonContext } from "./provider";
 
-export const useTestContext = () => {
+export const useTheme = () => {
     // get the context
     const context = useContext(CommonContext);
-
-    console.log("CONTEXT", context)
   
     // if `undefined`, throw an error
     if (!context) {
       throw new Error("useUserContext was used outside of its Provider");
     }
-    const { test, settest } = context;
+    const { theme, setTheme } = context;
   
-    return {test, settest};
+    return {theme, setTheme};
   };
 
-export default useTestContext;  
+export default useTheme;  

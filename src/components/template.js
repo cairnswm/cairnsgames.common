@@ -1,22 +1,20 @@
 import React, { useEffect } from "react";
-import { useTemplateContext } from "../provider/useprovider";
-import { useTestContext } from "../provider/usetest";
+import { useTheme} from "../provider/useTheme";
+import { useApplication } from "../provider/useApplication";
 
 const Template = () => {
-  const { user } = useTemplateContext();
-  const { test } = useTestContext();
+  const { theme } = useTheme();
+  const { application } = useApplication();
 
   useEffect(() => {
-    console.log("USER", user)
-  }, [user]);
+    console.log("application", application)
+  }, [application]);
 
   return <div>
-    <h1>User</h1>
-    {user && <div>
-      <p>{user.name.first} {user.name.last}</p>
-      </div>}
+    <h1>Application </h1>
       <div>
-        <b>Test</b>: {test}
+        <b>Theme</b>: {theme}<br/>
+        <b>Application</b>: {application}<br/>
       </div>
   </div>
 }
