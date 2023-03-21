@@ -11,7 +11,7 @@ const Template = () => {
   }, [application]);
 
   return <div>
-    <h1>Application </h1>
+    <h1>Common Layer Example </h1>
       <div>
         <b>Theme</b>: {theme}<br/>
         <b>Application</b>: {application}<br/>
