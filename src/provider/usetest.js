@@ -4,8 +4,6 @@ import { CommonContext } from "./provider";
 export const useTestContext = () => {
     // get the context
     const context = useContext(CommonContext);
-
-    console.log("CONTEXT", context)
   
     // if `undefined`, throw an error
     if (!context) {
