@@ -5,9 +5,9 @@ module.exports = {
   name: 'common',
   filename: 'common.js',
   exposes: {
-    './components': './src/components/exports.js',
-    './provider': './src/provider/exports.js',
-    './hooks': './src/hooks/exports.js'
+    './components': './src/tenant/components/exports.js',
+    './provider': './src/tenant/provider/exports.js',
+    './hooks': './src/tenant/hooks/exports.js'
   },
   shared: {
     ...deps,
