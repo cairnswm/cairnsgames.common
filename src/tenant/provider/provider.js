@@ -3,7 +3,7 @@ import React, { createContext, useState, useEffect } from "react";
 // create context
 const CommonContext = createContext();
 
-const CommonProvider = (props) => {
+const TenantProvider = (props) => {
   const { children } = props;
 
   const [theme, setTheme] = useState(props.theme || "light");
@@ -17,5 +17,5 @@ const CommonProvider = (props) => {
   );
 };
 
-export { CommonContext, CommonProvider };
-export default CommonProvider;
+export { CommonContext, TenantProvider };
+export default TenantProvider;
