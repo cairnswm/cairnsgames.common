@@ -1,21 +1,20 @@
 import React, { createContext, useState, useEffect } from "react";
 
 // create context
-const CommonContext = createContext();
+const TenantContext = createContext();
 
 const TenantProvider = (props) => {
   const { children } = props;
 
-  const [theme, setTheme] = useState(props.theme || "light");
-  const [application, setApplication] = useState(props.application);
+  const [tenant, setTenant] = useState(props.application);
 
   return (
     // the Provider gives access to the context to its children
-    <CommonContext.Provider value={{theme, setTheme, application}}>
+    <TenantContext.Provider value={{tenant}}>
       {children}
-    </CommonContext.Provider>
+    </TenantContext.Provider>
   );
 };
 
-export { CommonContext, TenantProvider };
+export { TenantContext, TenantProvider };
 export default TenantProvider;

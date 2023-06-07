@@ -1,4 +1,3 @@
-export { CommonContext } from './provider';
+export { TenantContext } from './provider';
 export { default as TenantProvider } from './provider';
-export { default as useApplication} from './useApplication';
-export { default as useTheme} from './useTheme';
+export { default as useTenant} from './usetenant';

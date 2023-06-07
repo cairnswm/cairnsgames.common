@@ -1,20 +1,19 @@
 import React, { useEffect } from "react";
-import { useTheme} from "../provider/useTheme";
-import { useApplication } from "../provider/useApplication";
+import { useTenant } from "../provider/usetenant";
 
 const Template = () => {
   const { theme } = useTheme();
-  const { application } = useApplication();
+  const { tenant } = useTenant();
 
   useEffect(() => {
-    console.log("application", application)
+    console.log("tenant", tenant)
   }, [application]);
 
   return <div>
     <h1>Common Layer Example </h1>
       <div>
         <b>Theme</b>: {theme}<br/>
-        <b>Application</b>: {application}<br/>
+        <b>tenant</b>: {tenant}<br/>
       </div>
   </div>
 }
