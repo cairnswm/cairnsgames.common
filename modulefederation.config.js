@@ -5,9 +5,7 @@ module.exports = {
   name: 'tenant',
   filename: 'tenant.js',
   exposes: {
-    './components': './src/tenant/components/exports.js',
-    './provider': './src/tenant/provider/exports.js',
-    './hooks': './src/tenant/hooks/exports.js'
+    './provider': './src/tenant/provider/exports.js'
   },
   shared: {
     ...deps,
